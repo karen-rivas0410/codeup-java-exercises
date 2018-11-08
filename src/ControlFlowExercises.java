@@ -1,3 +1,6 @@
+import jdk.nashorn.api.tree.StatementTree;
+
+import java.awt.font.FontRenderContext;
 import java.util.Scanner;
 
 public class ControlFlowExercises {
@@ -13,7 +16,7 @@ public class ControlFlowExercises {
 //      ///ANSWER////
 //        int i = 5;
 //        while (i <= 15) {
-//            System.out.println(i);
+//            System.out.print(i + " ");   //use the print not the println cause it will go on one line//
 //            i++;
 //        }
 
@@ -44,6 +47,8 @@ public class ControlFlowExercises {
 //            System.out.println(num);
 //            num *= num;
 //        }while (num < 1000000L);
+
+//        System.out.println(Integer.MAX_VALUE); //a good way to find out the max and min for a certain variable like integer//
         ///OPTION 2//
 //        double num  = 2;
 //        do {
@@ -114,17 +119,87 @@ public class ControlFlowExercises {
 //       4      | 16      | 64
 //       5      | 25      | 125
 
+//
+//        Scanner sc = new Scanner(System.in);
+//
+//        System.out.print("Enter an Integer: ");
+//        int userInput = sc.nextInt();
+
+//        System.out.println("Enter a number you would like to go up to: ");
+//
+//        int i, numLimit, square, cube;
+//        Scanner input = new Scanner(System.in);
+//        numLimit = input.nextInt();
+//
+//        System.out.println("Number | Squared | Cubed");
+//        System.out.println("------ | ------- | -----");
+//
+//        for(i = 1; i <= numLimit; i++){
+//            square = i * i;
+//            cube = i * i * i;
+//            System.out.printf(" %-5d | %-6d  | %d\n", i, square, cube);
+//        }
+//
+//        System.out.println("Would you like to continue? ");
+//        Scanner input2 = new Scanner(System.in);
+//        String more = input2.nextLine();
+//        if (more.equalsIgnoreCase("yes")) {
+//            System.out.println("Good Stuff!");
+//        } else {
+//            System.out.println("Too bad!");
+//        }
+
+
+//        Convert given number grades into letter grades.
+//        Prompt the user for a numerical grade from 0 to 100.
+//        Display the corresponding letter grade.
+//        Prompt the user to continue.
+//        Assume that the user will enter valid integers for the grades.
+//        The application should only continue if the user agrees to.
+//        Grade Ranges:
+//
+//        A : 100 - 88
+//        B : 87 - 80
+//        C : 79 - 67
+//        D : 66 - 60
+//        F : 59 - 0
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Enter an Integer: ");
-        int userInput = sc.nextInt();
+        String ifContinue;
+        do {
+            System.out.print("Enter a Numerical grade from 0 to 100: ");
+            int num = Integer.parseInt(sc.nextLine());
+            if ((num <= 100) && (num > 88)) {
+                System.out.println("A");
+            } else if ((num <= 87) && (num >= 80)) {
+                System.out.println("B");
+            } else if ((num <= 79) && (num >= 67)) {
+                System.out.println("C");
+            } else if ((num <= 66) && (num >= 60)) {
+                System.out.println("D");
+            } else if ((num <= 59) && (num >= 0)) {
+                System.out.println("F");
+            } else {
+                System.out.print("Not a Valid Input");
+            }
+
+            System.out.print("Would you like to continue?");
+            ifContinue = sc.nextLine();
+        }
+        while (ifContinue.equalsIgnoreCase("No");{
+            System.out.print("Word");
+        }
 
 
 
 
-
-
+//        OPTION TO RUN AS A SWITCH STATEMENT//CANNOT CONVERT A INT TO A BOOLEAN OR VICE-VERSA
+//        switch (num) {
+//            case (num <= 100) && (num > 88): {
+//                System.out.print()
+//            }
+//        }
 
 
     }
