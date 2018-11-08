@@ -1,6 +1,6 @@
-import jdk.nashorn.api.tree.StatementTree;
+import jdk.nashorn.api.tree.StatementTree; //IDK WHERE THIS CAME//
 
-import java.awt.font.FontRenderContext;
+import java.awt.font.FontRenderContext;  //IDK WHERE THIS CAME//
 import java.util.Scanner;
 
 public class ControlFlowExercises {
@@ -89,7 +89,7 @@ public class ControlFlowExercises {
 
 // for (int i = 1; i <= 100; i += 1) {
 ////     System.out.println(i);
-//     if (i % 3 == 0 && i % 5 == 0) {
+//     if (i % 3 == 0 && i % 5 == 0) {   //remember to keep this one at top if out of order, will not work//
 //         System.out.println("FizzBuzz");
 //     }else if ( i % 3 == 0) {
 //         System.out.println("Fizz");
@@ -124,7 +124,7 @@ public class ControlFlowExercises {
 //
 //        System.out.print("Enter an Integer: ");
 //        int userInput = sc.nextInt();
-
+//
 //        System.out.println("Enter a number you would like to go up to: ");
 //
 //        int i, numLimit, square, cube;
@@ -139,7 +139,8 @@ public class ControlFlowExercises {
 //            cube = i * i * i;
 //            System.out.printf(" %-5d | %-6d  | %d\n", i, square, cube);
 //        }
-//
+
+
 //        System.out.println("Would you like to continue? ");
 //        Scanner input2 = new Scanner(System.in);
 //        String more = input2.nextLine();
@@ -165,8 +166,8 @@ public class ControlFlowExercises {
 //        F : 59 - 0
 
         Scanner sc = new Scanner(System.in);
-
-        String ifContinue;
+//
+        String userInput;
         do {
             System.out.print("Enter a Numerical grade from 0 to 100: ");
             int num = Integer.parseInt(sc.nextLine());
@@ -185,9 +186,9 @@ public class ControlFlowExercises {
             }
 
             System.out.print("Would you like to continue?");
-            ifContinue = sc.nextLine();
+            userInput = sc.nextLine();
         }
-        while (ifContinue.equalsIgnoreCase("No");{
+        while (userInput.equalsIgnoreCase("yes"));{  //needed to close with a )!!!!!
             System.out.print("Word");
         }
 
