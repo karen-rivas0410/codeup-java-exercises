@@ -17,13 +17,13 @@ public class StringExercise {
 
 //        I can do backslashes \, double backslashes \\,
 //        and the amazing triple backslash \\\!
-
-        String message = "We don't need no education";
-            System.out.
-
-
-
-
+//
+//        String message = "We don't need no education";
+//            System.out.
+//
+//
+//
+//
 
 
 
