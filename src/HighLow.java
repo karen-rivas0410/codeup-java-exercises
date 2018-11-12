@@ -23,19 +23,26 @@ public class HighLow {
     public static int highLowGame(int random) {
         Scanner sc = new Scanner(System.in);
         int guess;
+        int numOfTries = 0;
+        boolean win = false;
+
+        while (win == false) {
         System.out.print("Guess a number between 1 and 100: ");
         guess = sc.nextInt();
+        numOfTries ++;
         if (guess < random) {
-            System.out.print("Higher!: ");
+            System.out.println("Higher! ");
             return highLowGame(random);
         }else if (guess > random) {
-            System.out.print("Lower: ");
+            System.out.println("Lower ");
             return highLowGame(random);
         }else if (guess == random) {
             System.out.print("GOOD GUESS!!! YOU ARE PSYCHIC");
+            win = true;
         }
         return 0;
-
+        }
+        return;
     }
 
     public static int randomNum () {
