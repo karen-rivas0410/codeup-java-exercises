@@ -1,17 +1,16 @@
 package shapes;
 
 public class Circle {
-    private int radius;
+    private double radius;
 
     public Circle() {
 
     }
-
-    public Circle(int radius) {
+    public Circle(double radius) {
         this.radius = radius;
     }
 
-    public int getRadius() {
+    public double getRadius() {
         return radius;
     }
 
