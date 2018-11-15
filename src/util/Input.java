@@ -7,7 +7,8 @@ public class Input {
 
 
     public Input() {
-        this.scanner = new Scanner(System.in);
+        this.scanner = scanner;  //this is the second way to do it, passing scanner in here and creating a new object for scanner in main method.
+//        this.scanner = new Scanner(System.in);  ///do the other way bc you are using less memory and data///
     }
     public Scanner getScanner() {
         return this.scanner;
@@ -23,6 +24,7 @@ public class Input {
      }
 
 //     public boolean yesNo() {
+        String userInput = getString();
 //        if (this.scanner.equals("y")) {
 //            System.out.println("Yes");
 //        }else if (this.scanner.equals("n"))
@@ -32,9 +34,9 @@ public class Input {
 //     public int getInt(int min, int max) {
 //        return
 //     }
-//     public int getInt() {
-//
-//     }
+     public int getInt() {
+
+     }
 //
 //     double getDouble(double min, double max) {
 //
