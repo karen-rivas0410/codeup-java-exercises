@@ -34,15 +34,15 @@ public class Input {
 //     public int getInt(int min, int max) {
 //        return
 //     }
-     public int getInt() {
-
-     }
+//     public int getInt() {
+//
+//     }
 //
 //     double getDouble(double min, double max) {
 //
 //     }
 //    public double getDouble() {
-//        retturn this.scanner.
+//        return this.scanner.
 //    }
 //
 }
