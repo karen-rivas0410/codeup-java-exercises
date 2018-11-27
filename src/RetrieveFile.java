@@ -3,6 +3,7 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Arrays;
 
@@ -14,10 +15,11 @@ public class RetrieveFile {
 //        try {  //this creates a file
 //            Files.createFile(list);
 //        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
+//            e.printStackTrace();}
 
-        if (!Files.exists(list)) { //if not there this will create it
+        //if not there this will create it
+
+        if (!Files.exists(list)) {
             try {
                 Files.createFile(list);
             } catch (IOException e) {
@@ -25,7 +27,9 @@ public class RetrieveFile {
             }
 
         }
-        try {  //this reads the file
+
+        //this reads the file
+        try {
             stuff = Files.readAllLines(list);
         } catch (IOException e) {
             e.printStackTrace();
@@ -33,17 +37,18 @@ public class RetrieveFile {
 
         System.out.println(stuff);
 
-        List<String> moreStuff = new Arraylist<>();
+
+        //this adds to the list //it will override
+        List<String> moreStuff = new ArrayList<>();
         moreStuff.add("Dog");
         moreStuff.add("Seahorse");
         moreStuff.add("whatever");
-
-
         try {
-            Files.write(list,moreStuff, StandardOpenOption.APPEND);
+            Files.write(list, moreStuff);
         } catch (Exception e) {
             e.printStackTrace();
         }
+        System.out.println(moreStuff);
     }
 }
 
